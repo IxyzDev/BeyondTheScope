@@ -8,7 +8,7 @@ BeyondTheScopeProyect/[Oo]bj/
 BeyondTheScopeProyect/[Bb]uild/
 BeyondTheScopeProyect/[Bb]uilds/
 BeyondTheScopeProyect/[Ll]ogs/
-BeyondTheScopeProyect/[Uu]ser[Ss]ettings/
+#BeyondTheScopeProyect/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -70,17 +70,3 @@ BeyondTheScopeProyect/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 # Temporary auto-generated Android Assets
 BeyondTheScopeProyect/[Aa]ssets/[Ss]treamingAssets/aa.meta
 BeyondTheScopeProyect/[Aa]ssets/[Ss]treamingAssets/aa/*
-
-# VR specific
-BeyondTheScopeProyect/[Aa]ssets/*[Vv]r*
-BeyondTheScopeProyect/[Aa]ssets/[Oo]culus/
-BeyondTheScopeProyect/[Aa]ssets/[Ss]team[Vv]r/
-BeyondTheScopeProyect/[Aa]ssets/[Vv]ive/
-BeyondTheScopeProyect/[Aa]ssets/[Vv]irtual[Rr]eality/
-BeyondTheScopeProyect/[Aa]ssets/[Ii]nteraction[Ss]ystem/
-
-# Plugins for VR might also generate files that you want to ignore
-BeyondTheScopeProyect/[Aa]ssets/Plugins/*[Vv]r*
-
-# Ignore specific settings files for VR development
-BeyondTheScopeProyect/[Uu]ser[Ss]ettings/*[Vv]r*
