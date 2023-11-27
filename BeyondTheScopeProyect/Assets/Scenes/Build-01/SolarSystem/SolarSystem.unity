@@ -181,9 +181,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8945104}
-  - component: {fileID: 8945105}
+  - component: {fileID: 8945106}
   m_Layer: 0
-  m_Name: Teleport
+  m_Name: Mercury_Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,9 +202,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1591918959}
+  m_Father: {fileID: 359179017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8945105
+--- !u!114 &8945106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,12 +213,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8945103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e01e092c8c51644ebf2071f4219de44, type: 3}
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoPadre: {fileID: 1591918959}
-  objetoHijo: {fileID: 21997415}
-  Piso: {fileID: 2006136509}
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 1591918958}
 --- !u!1001 &21997414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1182,20 +1181,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentToDestination: 1
-  _metersPerSecondNormal: 2
-  _metersPerSecondSprint: 4
+  _metersPerSecondNormal: 10
+  _metersPerSecondSprint: 100
   _walkDirection: 2
   _rotationDegreesPerSecondNormal: 120
   _rotationDegreesPerSecondSprint: 120
-  _gravity: -9.81
+  _gravity: 0
   _sprintButtonHand: 0
   _sprintButton: 1
   _upButtonHand: 1
-  _upButton: 1
+  _upButton: 262144
   _downButtonHand: 1
-  _downButton: 1
-  _metersPerSecondVertical: 1
-  _metersPerSecondVerticalSprint: 2
+  _downButton: 131072
+  _metersPerSecondVertical: 10
+  _metersPerSecondVerticalSprint: 100
   _triggerCollidersInteraction: 1
   _collisionLayerMask:
     serializedVersion: 2
@@ -1446,6 +1445,52 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &77924493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77924494}
+  - component: {fileID: 77924495}
+  m_Layer: 0
+  m_Name: Saturn_Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77924494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77924493}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2065638006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77924495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77924493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 7113575333262277717}
 --- !u!1 &84264105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,8 +1809,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1121033265}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2329,9 +2374,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055649419}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+      - m_Target: {fileID: 1044255497}
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2463,9 +2508,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 721738666}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+      - m_Target: {fileID: 77924495}
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2832,6 +2877,41 @@ Transform:
   - {fileID: 422752972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &359179016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 359179017}
+  m_Layer: 0
+  m_Name: Inner_Planets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &359179017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359179016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8945104}
+  - {fileID: 1334171207}
+  - {fileID: 1121033264}
+  - {fileID: 1161880314}
+  m_Father: {fileID: 1656490199}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &384396049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,8 +3075,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1334171208}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3674,6 +3754,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485018320}
   m_CullTransparentMesh: 1
+--- !u!1 &493473140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493473141}
+  - component: {fileID: 493473142}
+  m_Layer: 0
+  m_Name: Free_Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493473141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493473140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1656490199}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &493473142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493473140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a02a3b7f9058a468d4c61fdb1f6545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 21997415}
 --- !u!1 &516193625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,9 +4500,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1369296014}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+      - m_Target: {fileID: 1580428009}
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4929,9 +5054,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8945105}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+      - m_Target: {fileID: 8945106}
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5834,6 +5959,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 358676009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1044255495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044255496}
+  - component: {fileID: 1044255497}
+  m_Layer: 0
+  m_Name: Jupiter_Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044255496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044255495}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2065638006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044255497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044255495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 8857385551311641681}
 --- !u!1 &1051591817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,7 +6201,7 @@ GameObject:
   - component: {fileID: 1121033264}
   - component: {fileID: 1121033265}
   m_Layer: 0
-  m_Name: Teleport
+  m_Name: Earth_Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6049,7 +6220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6683804739346912617}
+  m_Father: {fileID: 359179017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1121033265
 MonoBehaviour:
@@ -6060,12 +6231,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1121033263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e01e092c8c51644ebf2071f4219de44, type: 3}
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoPadre: {fileID: 6683804739346912617}
-  objetoHijo: {fileID: 21997415}
-  Piso: {fileID: 2006136509}
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 6690082670324640727}
 --- !u!1 &1130288791
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,7 +6506,7 @@ GameObject:
   - component: {fileID: 1161880314}
   - component: {fileID: 1161880315}
   m_Layer: 0
-  m_Name: Teleport
+  m_Name: Mars_Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6355,7 +6525,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1572900490056380168}
+  m_Father: {fileID: 359179017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1161880315
 MonoBehaviour:
@@ -6366,12 +6536,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1161880313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e01e092c8c51644ebf2071f4219de44, type: 3}
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoPadre: {fileID: 1572900490056380168}
-  objetoHijo: {fileID: 21997415}
-  Piso: {fileID: 2006136509}
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 1575998311422434028}
 --- !u!1 &1176942585
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,7 +7120,7 @@ GameObject:
   - component: {fileID: 1334171207}
   - component: {fileID: 1334171208}
   m_Layer: 0
-  m_Name: Teleport
+  m_Name: Venus_Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6970,7 +7139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2502178296811240017}
+  m_Father: {fileID: 359179017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1334171208
 MonoBehaviour:
@@ -6981,12 +7150,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1334171206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e01e092c8c51644ebf2071f4219de44, type: 3}
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoPadre: {fileID: 2502178296811240017}
-  objetoHijo: {fileID: 21997415}
-  Piso: {fileID: 2006136509}
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 2500081855334135017}
 --- !u!1 &1349352012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7938,9 +8106,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 387059872}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+      - m_Target: {fileID: 1684102923}
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8381,6 +8549,52 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &1580428007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580428008}
+  - component: {fileID: 1580428009}
+  m_Layer: 0
+  m_Name: Neptune_Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580428008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580428007}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2065638006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580428009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580428007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 3202938926659966940}
 --- !u!1 &1591918958
 GameObject:
   m_ObjectHideFlags: 0
@@ -8390,7 +8604,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1591918959}
-  - component: {fileID: 1591918960}
   - component: {fileID: 1591918962}
   m_Layer: 0
   m_Name: Mercury
@@ -8414,31 +8627,9 @@ Transform:
   m_Children:
   - {fileID: 420216125}
   - {fileID: 998418042}
-  - {fileID: 8945104}
   - {fileID: 890025229}
   m_Father: {fileID: 1775007569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1591918960
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591918958}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1591918962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8791,6 +8982,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651166856}
   m_Mesh: {fileID: -6558040069850265186, guid: 85b55befbcd9879479f019b560bdacb1, type: 3}
+--- !u!1 &1656490198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656490199}
+  m_Layer: 0
+  m_Name: Planet_Teleport_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1656490199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656490198}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 359179017}
+  - {fileID: 2065638006}
+  - {fileID: 493473141}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1669451448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,6 +9099,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669451448}
   m_Mesh: {fileID: 3708063140734900064, guid: 85b55befbcd9879479f019b560bdacb1, type: 3}
+--- !u!1 &1684102921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1684102922}
+  - component: {fileID: 1684102923}
+  m_Layer: 0
+  m_Name: Uranus_Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1684102922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684102921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2065638006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1684102923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684102921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286425a33baae5c4c8d83a84024e5064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 21997415}
+  objetoMovimiento: {fileID: 6642252948250627640}
 --- !u!1 &1691283735
 GameObject:
   m_ObjectHideFlags: 0
@@ -9651,7 +9922,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1940588192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 493473142}
+        m_TargetAssemblyTypeName: DetachAndStopFollowing, Assembly-CSharp
+        m_MethodName: DetachAndStop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1940588192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9735,12 +10018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90cf3af06b911545a705cc2a303dda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfAsteroids: 1000
-  beltThickness: 5
-  rotationSpeedRange: {x: -0.5, y: 0.5}
-  orbitSpeedRange: {x: -0.1, y: 0.1}
-  axialTiltRange: {x: -0.5, y: 0.5}
-  scaleRange: {x: 0.1, y: 0.5}
 --- !u!114 &1943863375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9753,12 +10030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1ecb97787822a4eba8b373f4fa82d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefabs:
-  - {fileID: 213113585}
-  - {fileID: 294595055}
-  - {fileID: 623226189}
-  - {fileID: 149071999}
-  initialPoolSize: 300
 --- !u!1 &1957946304
 GameObject:
   m_ObjectHideFlags: 0
@@ -10216,6 +10487,41 @@ MonoBehaviour:
   objetoPadre: {fileID: 8854354036546269837}
   objetoHijo: {fileID: 21997415}
   Piso: {fileID: 2006136509}
+--- !u!1 &2065638005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065638006}
+  m_Layer: 0
+  m_Name: Outer_Planets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2065638006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065638005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1044255496}
+  - {fileID: 77924494}
+  - {fileID: 1684102922}
+  - {fileID: 1580428008}
+  m_Father: {fileID: 1656490199}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070900175
 GameObject:
   m_ObjectHideFlags: 0
@@ -10459,8 +10765,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1161880315}
-        m_TargetAssemblyTypeName: Teleport, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_TargetAssemblyTypeName: TeleportAndFollow, Assembly-CSharp
+        m_MethodName: TeleportAndFollowObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10523,7 +10829,6 @@ Transform:
   m_Children:
   - {fileID: 1268875747}
   - {fileID: 448843867}
-  - {fileID: 1161880314}
   - {fileID: 1308560889}
   m_Father: {fileID: 1775007569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10536,7 +10841,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572900490056380168}
-  - component: {fileID: 1575998311422434029}
   - component: {fileID: 1575998311422434032}
   m_Layer: 0
   m_Name: Mars
@@ -10545,27 +10849,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1575998311422434029
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575998311422434028}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1575998311422434032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10593,7 +10876,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2502178296811240017}
-  - component: {fileID: 2502178296811240018}
   - component: {fileID: 2502178296811240021}
   m_Layer: 0
   m_Name: Venus
@@ -10617,31 +10899,9 @@ Transform:
   m_Children:
   - {fileID: 1305143541}
   - {fileID: 102926474}
-  - {fileID: 1334171207}
   - {fileID: 349669943}
   m_Father: {fileID: 1775007569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2502178296811240018
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2500081855334135017}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2502178296811240021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15927,7 +16187,6 @@ Transform:
   m_Children:
   - {fileID: 1873576063}
   - {fileID: 1008295836}
-  - {fileID: 1121033264}
   - {fileID: 1500046689}
   - {fileID: 4183285000341405066}
   m_Father: {fileID: 1775007569}
@@ -15941,7 +16200,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6683804739346912617}
-  - component: {fileID: 6690082670324640728}
   - component: {fileID: 6690082670324640731}
   m_Layer: 0
   m_Name: Earth
@@ -15950,27 +16208,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &6690082670324640728
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6690082670324640727}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6690082670324640731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16238,3 +16475,4 @@ SceneRoots:
   - {fileID: 2006136510}
   - {fileID: 50411251}
   - {fileID: 384396050}
+  - {fileID: 1656490199}
