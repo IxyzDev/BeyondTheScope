@@ -1,30 +1,55 @@
 # Beyond The Scope: Proyecto de Realidad Virtual en Astronomía
 
-## Descripción
+## Índice
+- [Beyond The Scope: Proyecto de Realidad Virtual en Astronomía](#beyond-the-scope-proyecto-de-realidad-virtual-en-astronomía)
+  - [Índice](#índice)
+  - [Resumen Ejecutivo](#resumen-ejecutivo)
+  - [Descripción del Proyecto](#descripción-del-proyecto)
+  - [Público Objetivo](#público-objetivo)
+  - [Atractivo de la Aplicación](#atractivo-de-la-aplicación)
+  - [Cómo Usar](#cómo-usar)
+  - [Requisitos Técnicos](#requisitos-técnicos)
+  - [Difusión y Captación de Clientes](#difusión-y-captación-de-clientes)
+  - [Estrategia de Monetización](#estrategia-de-monetización)
+  - [Plan de Lanzamiento](#plan-de-lanzamiento)
+  - [Visión a Futuro](#visión-a-futuro)
+  - [Valores del Proyecto](#valores-del-proyecto)
 
-**Beyond The Scope** ("Fuera del Alcance") es una experiencia de realidad virtual que permite a los usuarios sumergirse en una exploración interactiva del sistema solar. El proyecto tiene como objetivo llevar a los usuarios más allá de lo que pueden ver o comprender a simple vista, ofreciendo una perspectiva única de los planetas que componen nuestro sistema.
+## Resumen Ejecutivo
+"Beyond the Scope" es una aplicación de realidad virtual que proporciona una experiencia educativa inmersiva en astronomía. Permite a los usuarios explorar el sistema solar de manera interactiva.
 
-## 1. Objetivos
+## Descripción del Proyecto
+Los usuarios inician en una nave espacial, que sirve como tutorial, y pueden viajar a planetas o explorar el espacio. La aplicación fomenta el aprendizaje sobre el sistema solar mediante la interacción y modificación de sus elementos.
 
-- Brindar una experiencia inmersiva y realista de los planetas del sistema solar.
-- Proporcionar detalles científicos, características geográficas y curiosidades sobre cada planeta.
-- Asegurar una transición fluida entre la perspectiva exterior e interior de los planetas.
+## Público Objetivo
+Dirigido a un rango de edad de 15 a 40 años, incluyendo estudiantes, educadores y aficionados al espacio.
 
-## 2. Alcance
+## Atractivo de la Aplicación
+Ofrece una experiencia de aprendizaje interactiva y vivencial en astronomía, permitiendo a los usuarios explorar y aprender de manera dinámica.
 
-- Exploración de los planetas principales: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno.
-- Proveer información relevante sobre composición, temperatura, atmósfera y datos históricos de cada planeta.
-- En esta fase inicial, no se incluirán lunas o asteroides.
+## Cómo Usar
+La aplicación se descarga gratuitamente desde GitHub y próximamente en una página web. Los usuarios interactúan con el entorno VR para moverse y experimentar con el sistema solar.
 
-## 3. Requerimientos
+## Requisitos Técnicos
+- Dispositivo Oculus VR
+- Conexión a Internet para descarga
+- Espacio de almacenamiento adecuado en el dispositivo
 
-- Investigación y recopilación de datos científicos.
-- Diseño de modelos 3D para planetas y sus alrededores.
-- Desarrollo de interfaz de usuario interactiva.
-- Creación de transiciones entre perspectivas de planetas.
-- Integración de efectos de sonido y música.
+## Difusión y Captación de Clientes
+Promoción en eventos educativos universitarios, exposiciones de proyectos, redes sociales y marketing digital.
 
-## 6. Jefe de proyecto
+## Estrategia de Monetización
+Ingresos a través de licencias comerciales para instituciones educativas y colaboraciones estratégicas.
 
-- Líder de proyecto: Alejandro Diaz
-# BeyondTheScope
+## Plan de Lanzamiento
+Presentación en eventos educativos, conferencias astronómicas y ferias científicas para obtener retroalimentación y establecer contactos.
+
+## Visión a Futuro
+Ser un referente global en educación virtual interactiva y expandir el conocimiento astronómico.
+
+## Valores del Proyecto
+- Accesibilidad
+- Interactividad
+- Curiosidad
+- Innovación
+- Escalabilidad
